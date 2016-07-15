@@ -1,0 +1,21 @@
+#N canvas 652 396 822 635 10;
+#X obj 12 52 inlet~ signal;
+#X obj 140 149 inlet panorama;
+#X text 143 131 0 ... 1;
+#X obj 13 236 panner_ch \$1 \$2 \$3;
+#X obj 108 299 vsl 12 75 0 1 0 0 empty empty empty 0 -9 0 10 -232576
+-1 -1 7400 1;
+#X text 287 192 takes three arguments: \$1 number of speaker channels
+-1 \, \$2 position in arrray (0 - n) \, \$3 span/width of panning behavior
+;
+#X text 290 9 gain channel for linear multichannel panning applications
+;
+#X obj 12 296 outlet~;
+#X obj 239 150 inlet width;
+#X text 240 130 0 ... 1;
+#X connect 0 0 3 0;
+#X connect 1 0 3 1;
+#X connect 3 0 7 0;
+#X connect 3 1 4 0;
+#X connect 8 0 3 2;
+#X coords 0 -1 1 1 28 100 1 100 280;
